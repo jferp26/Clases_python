@@ -1,3 +1,5 @@
+
+
 class Agenda:
     def __init__(self):
         self.agenda = {}
@@ -52,18 +54,6 @@ class Agenda:
            elif self.accion == 5:
                print("Usted ha salido de la agenda")
                break
-           
-               
-            
 
 mi_agenda = Agenda()
-"""
-
-mi_agenda.añadir_contacto()
-mi_agenda.añadir_contacto()
-mi_agenda.mostrar_agenda()
-mi_agenda.buscar_contacto()
-mi_agenda.borrar_contacto()
-mi_agenda.mostrar_agenda()"
-"""
 mi_agenda.menu_agenda()
