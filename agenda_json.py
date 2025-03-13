@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 
 
@@ -55,15 +56,44 @@ class Agenda:
     def guardaragenda(self):
          with open(self.archivo,"w") as f:
               json.dump(self.contactos, f, indent=4)
+
+
+def menu_agenda():
+
+        while True:
+           print("bienvenido a Agenda")
+           print("Seleccione la accion que desea realizar")
+           print(" 1.- Añadir contacto")
+           print(" 2.- buscar contacto")
+           print(" 3.- borrar contacto")
+           print(" 4.- Mostrar Agenda")
+           print(" 5.- Salir de la Agenda")
+           accion=int(input("Introduzca la opccion deseada: "))
+           if accion == 1:
+               Agenda_test.añadircontacto()
+           elif accion == 2:
+               Agenda_test.buscarcontactos()
+           elif accion == 3:
+               Agenda_test.borrarcontacto()
+           elif accion == 4:
+               Agenda_test.mostraragenda()
+           elif accion == 5:
+               Agenda_test.guardaragenda()
+               print("Usted ha salido de la agenda")
+               sys.exit()
               
 #__name__ nombre del archivo que no se ejecuta el primero
 #__main__ archivo que se ejecuta en primer plano
-def menu():
-    pass
-if __name__=="__main__":
-     menu()
-        
 Agenda_test = Agenda()
-Agenda_test.mostraragenda()
+menu_agenda()
+
+
+
+if __name__=="__main__":
+    menu_agenda()
+        
+
+
+
         
 
