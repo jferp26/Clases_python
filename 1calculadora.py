@@ -1,3 +1,7 @@
+#Ejercicio 1: Calculadora básica con clases
+#Crea una clase Calculadora que tenga métodos para sumar, restar, multiplicar y dividir dos números.
+#Incluye un constructor que inicialice los dos números como atributos.
+
 class Calculadora:
     def __init__(self, numero1, numero2):
         self.numero1 = numero1
@@ -32,16 +36,18 @@ def menu():
         num1 = int(input("Introduzca el primer numero: "))
         num2 = int(input("Introduzca el segundo numero: "))
 
-        calculator = Calculadora(num1, num2)
+        calculeitor = Calculadora(num1, num2)
 
         if operacion == 1:
-            print(f"{num1} + {num2} = {calculator.suma()}")
+            print(f"{num1} + {num2} = {calculeitor.suma()}")
         elif operacion == 2:
-            print(f"{num1} - {num2} = {calculator.resta()}")
+            print(f"{num1} - {num2} = {calculeitor.resta()}")
         elif operacion == 3:
-            print(f"{num1} x {num2} = {calculator.multiplicacion()}")
+            print(f"{num1} x {num2} = {calculeitor.multiplicacion()}")
         elif operacion == 4:
-            print(f"{num1} / {num2} = {calculator.division()}")
+            print(f"{num1} / {num2} = {calculeitor.division()}")
+
+
 if __name__ == "__main__":        
   menu()
    

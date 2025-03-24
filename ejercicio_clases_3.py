@@ -24,21 +24,20 @@ class Profesor:
 
 
 class ProfesorAsociado(Profesor):
-    PRECIO_POR_HORA = 20.0  # Precio por hora harcodeado
+    PRECIO_POR_HORA = 20.0 
 
     def __init__(self, asignatura, horas_clase):
-        super().__init__(asignatura, 0)  # El salario inicial es 0 y se calcula
+        super().__init__(asignatura, 0) 
         self._horas_clase = horas_clase
-
-    # Getter y Setter para horas de clase
+        
+        
     def get_horas_clase(self):
         return self._horas_clase
 
     def set_horas_clase(self, horas_clase):
         self._horas_clase = horas_clase
-        self.calcular_salario()  # Recalcula el salario al cambiar las horas
+        self.calcular_salario()
 
-    # Método para calcular el salario basado en las horas de clase
     def calcular_salario(self):
         self._salario = self._horas_clase * ProfesorAsociado.PRECIO_POR_HORA
   

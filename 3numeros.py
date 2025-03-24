@@ -15,6 +15,6 @@ class Numeros:
                 continue
         return pares
     
-    
-numeritos=Numeros([1,2,3,4,5,6,7,8,9,0,10,11,12,22223333444455556667888,13,14,15,16,17,18])
-print(numeritos.listapares())
+if __name__== "__main__":
+    numeritos=Numeros([1,2,3,4,5,6,7,8,9,0,10,11,12,22223333444455556667888,13,14,15,16,17,18])
+    print(numeritos.listapares())
