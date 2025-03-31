@@ -83,9 +83,9 @@ etiqueta_final.pack()
 frame_botones = tk.Frame(ventana)
 frame_botones.pack()
 
-imagen_piedra = tk.PhotoImage(file="piedra.png")
-imagen_papel = tk.PhotoImage(file="papel.png")
-imagen_tijera = tk.PhotoImage(file="tijera.png")
+imagen_piedra = tk.PhotoImage(file="img/piedra.png")
+imagen_papel = tk.PhotoImage(file="img/papel.png")
+imagen_tijera = tk.PhotoImage(file="img/tijera.png")
 
 
 boton_piedra = tk.Button(frame_botones, image=imagen_piedra, command=lambda: jugar('Piedra'))

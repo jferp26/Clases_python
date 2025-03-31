@@ -37,3 +37,5 @@ class Estudiante:
 
 if __name__== "__main__":
     
+    pepito = Estudiante("juan",18,5)
+    print(pepito.aprobado())
