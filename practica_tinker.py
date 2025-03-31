@@ -1,7 +1,7 @@
 
 import tkinter as tk
 from tkinter import messagebox
-from calculadora import Calculadora
+from _1calculadora import Calculadora
 class CalculadoraGUI:
     def __init__(self, root):
         self.root = root

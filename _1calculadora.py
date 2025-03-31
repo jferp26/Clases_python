@@ -8,16 +8,21 @@ class Calculadora:
         self.numero2 = numero2
 
     def suma(self):
-        return self.numero1 + self.numero2
-
+            return self.numero1 + self.numero2
+       
     def resta(self):
-        return self.numero1 - self.numero2
-
+              return self.numero1 - self.numero2
+    
     def multiplicacion(self):
         return self.numero1 * self.numero2
 
     def division(self):
-        return self.numero1 / self.numero2
+        try:
+            return self.numero1 / self.numero2
+        except:
+            ZeroDivisionError
+            raise("no se puede dividir entre 0")       
+    
 
 def menu():
     while True:
@@ -28,13 +33,26 @@ def menu():
         print("4.- DIVISION")
         print("5.- SALIR")
 
-        operacion = int(input("Introduzca la operacion a realizar: "))
+        try:
+            operacion = int(input("Introduzca la operacion a realizar: "))
+        
+        except:
+            ValueError
+            print ("debe introducir un entero del 1 al 5")
+            continue
         if operacion == 5:
             print("HASTA LUEGO")
             break
+        elif operacion not in [1,2,3,4]:
+            print("la operacion no es valida")
 
-        num1 = int(input("Introduzca el primer numero: "))
-        num2 = int(input("Introduzca el segundo numero: "))
+        try:
+            num1 = int(input("Introduzca el primer numero: "))
+            num2 = int(input("Introduzca el segundo numero: "))
+        except:
+            ValueError
+            print("debe introducir numeros")
+            continue
 
         calculeitor = Calculadora(num1, num2)
 
@@ -46,6 +64,8 @@ def menu():
             print(f"{num1} x {num2} = {calculeitor.multiplicacion()}")
         elif operacion == 4:
             print(f"{num1} / {num2} = {calculeitor.division()}")
+        
+     
 
 
 if __name__ == "__main__":        
